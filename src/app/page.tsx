@@ -1,3 +1,4 @@
+import Contact from '@/components/Contact';
 import ProjectCard from '@/components/ProjectCard';
 import Skills from '@/components/Skills';
 import Image from 'next/image';
@@ -60,12 +61,16 @@ export default function Home() {
       <h1 className="text-5xl text-white font-bold mb-4 bg- text-center p-10 ">
         Skills
       </h1>
-      <section className="flex flex-row items-center h-screen overflow-x-hidden">
+      <section className="flex flex-row justify-center items-center pb-20 overflow-x-hidden">
         <Skills />
       </section>
-      <h1>Contact Me</h1>
-      <section className="flex flex-row justify- center items-center h-screen overflow-x-hidden">
-        Contact section content
+      <h1 className="text-white bg-black text-center">Resume Page</h1>
+      <section className="flex flex-row h-screen overflow-x-hidden">
+        Resume Page
+      </section>
+      <h1 className="text-white bg-black text-center">Contact Page</h1>
+      <section className="flex flex-row h-screen overflow-x-hidden">
+        <Contact />
       </section>
     </main>
   );

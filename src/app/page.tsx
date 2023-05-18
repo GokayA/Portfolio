@@ -1,24 +1,51 @@
 import ProjectCard from '@/components/ProjectCard';
+import Skills from '@/components/Skills';
 import Image from 'next/image';
 import { aboutMeData, projects } from './data/data';
 
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <section className="min-h-screen flex flex-col items-center justify-center overflow-x-hidden">
-        <div className="text-center container">
-          <h1 className="text-5xl text-white font-bold mb-4 ">
-            {aboutMeData.name}
-          </h1>
-          <p className="text-xl 0 mb-8">{aboutMeData.title}</p>
+      <section
+        className="hero min-h-screen"
+        style={{
+          backgroundImage: `url("/background2.jpg")`,
+        }}
+      >
+        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-content text-center text-neutral-content">
+          <div className="max-w-md">
+            <h1 className="mb-5 text-5xl font-bold">{aboutMeData.name}</h1>
+            <p className="mb-5">{aboutMeData.title}</p>
+            <div className="flex justify-center gap-5 pt-10">
+              <button className="btn">RESUME</button>
+              <div className="divider divider-horizontal"></div>
+              <button className="btn">CONTACT ME</button>
+            </div>
+          </div>
         </div>
-        <Image
-          width={2500}
-          height={2000}
-          className="h-full w-full object-cover opacity-40 absolute"
-          src="/background2.jpg"
-          alt="Background Image"
-        />
+      </section>
+      <section className="hero min-h-screen bg-base-200">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <Image
+            src="/avatar.png"
+            className="max-w-sm rounded-lg shadow-2xl"
+            alt="profile-image"
+            width={700}
+            height={475}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+            priority
+          />
+
+          <div>
+            <h1 className="text-5xl font-bold">{aboutMeData.title}</h1>
+            <p className="py-6">{aboutMeData.body}</p>
+          </div>
+        </div>
       </section>
       <h1 className="text-5xl text-white font-bold mb-4 bg- text-center p-10 ">
         Projects
@@ -33,29 +60,12 @@ export default function Home() {
       <h1 className="text-5xl text-white font-bold mb-4 bg- text-center p-10 ">
         Skills
       </h1>
-      <section className="h-screen flex flex-row items-center justify-around overflow-x-hidden">
-        <div className="text-center ">
-          <button className="btn text-5xl text-white font-bold mb-4 ">
-            CONTACT ME
-          </button>
-        </div>
-        <div className="text-center ">
-          <button className="btn text-5xl text-white font-bold mb-4 ">
-            RESUME
-          </button>
-        </div>
+      <section className="flex flex-row items-center h-screen overflow-x-hidden">
+        <Skills />
       </section>
-      <section className="h-screen flex flex-row items-center justify-around overflow-x-hidden">
-        <div className="text-center ">
-          <button className="btn text-5xl text-white font-bold mb-4 ">
-            CONTACT ME
-          </button>
-        </div>
-        <div className="text-center ">
-          <button className="btn text-5xl text-white font-bold mb-4 ">
-            RESUME
-          </button>
-        </div>
+      <h1>Contact Me</h1>
+      <section className="flex flex-row justify- center items-center h-screen overflow-x-hidden">
+        Contact section content
       </section>
     </main>
   );

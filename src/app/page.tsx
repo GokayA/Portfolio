@@ -1,8 +1,8 @@
 import Contact from '@/components/Contact';
 import ProjectCard from '@/components/ProjectCard';
 import Skills from '@/components/Skills';
+import { aboutMeData, projects } from '@/data/data';
 import Image from 'next/image';
-import { aboutMeData, projects } from './data/data';
 
 export default function Home() {
   return (

@@ -29,11 +29,11 @@ const Navbar: FC<NavbarProps> = ({}) => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
+              <a>Projects</a>
             </li>
 
             <li>
-              <a>Item 3</a>
+              <a>Resume</a>
             </li>
           </ul>
         </div>

@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="dark">
-      <body className={inter.className}>
+    <html lang="en" data-theme="dark" className={inter.className}>
+      <body className="min-h-screen">
         <Navbar />
         {children}
         <Footer />

@@ -10,10 +10,13 @@ export default function Home() {
       <section>
         <Hero />
       </section>
-      <section className="hero min-h-screen bg-base-200">
+      <h1 className="text-5xl text-white font-bold mb-4 text-center p-10 ">
+        About Me
+      </h1>
+      <section className="hero min-h-screen">
         <Aboutme />
       </section>
-      <h1 className="text-5xl text-white font-bold mb-4 bg- text-center p-10 ">
+      <h1 className="text-5xl text-white font-bold mb-4 text-center p-10 ">
         Projects
       </h1>
       <section className="justify-center min-h-screen flex flex-col items-center  overflow-x-hidden">

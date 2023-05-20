@@ -1,9 +1,9 @@
+import AnimatedText from '@/components/ui/AnimatedText';
 import { aboutMeData } from '@/data/data';
-import { FC } from 'react';
 
 interface HeroProps {}
 
-const Hero: FC<HeroProps> = ({}) => {
+const Hero = () => {
   return (
     <div
       className="hero min-h-screen"
@@ -14,8 +14,10 @@ const Hero: FC<HeroProps> = ({}) => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">{aboutMeData.name}</h1>
-          <p className="mb-5">{aboutMeData.title}</p>
+          <AnimatedText className="mb-5 text-5xl font-bold">
+            {aboutMeData.name}
+          </AnimatedText>
+          <AnimatedText className="mb-5">{aboutMeData.title}</AnimatedText>
           <div className="flex justify-center gap-5 pt-10">
             <button className="btn">RESUME</button>
             <div className="divider divider-horizontal"></div>

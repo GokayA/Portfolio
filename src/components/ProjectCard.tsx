@@ -1,5 +1,6 @@
+'use client';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import React from 'react';
 
 interface Link {
   text: string;
@@ -17,11 +18,35 @@ interface ProjectCardProps {
   project: Project;
 }
 
+const ProjectCardVariant = {
+  initial: {
+    opacity: 0,
+    x: '-300',
+  },
+
+  whileInView: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.5,
+      type: 'spring',
+      bounce: 0.4,
+      duration: 0.8,
+      stiffness: 120,
+    },
+  },
+};
+
 function ProjectCard({ project }: ProjectCardProps) {
   const { title, body1, body2, links } = project;
 
   return (
-    <div className="card w-full bg-base-100 shadow-2xl">
+    <motion.div
+      className="card w-full bg-base-100 shadow-2xl"
+      variants={ProjectCardVariant}
+      initial="initial"
+      whileInView="whileInView"
+    >
       <figure>
         <Image width={300} height={300} src="/avatar.png" alt="Shoes" />
       </figure>
@@ -45,7 +70,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           </a>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,13 +1,39 @@
+'use client';
 import { motion } from 'framer-motion';
 import { FC } from 'react';
 
 interface AnimatedButtonProps {
-  text: string;
+  children: string;
   className: string;
 }
 
-const AnimatedButton: FC<AnimatedButtonProps> = ({ text, className = '' }) => {
-  return <motion.button className={className}>{text}</motion.button>;
+const buttonVariants = {
+  initial: {
+    x: '-90vw',
+  },
+  animate: {
+    x: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 120,
+    },
+  },
+};
+
+const AnimatedButton: FC<AnimatedButtonProps> = ({
+  children,
+  className = '',
+}) => {
+  return (
+    <motion.button
+      variants={buttonVariants}
+      initial="initial"
+      animate={'animate'}
+      className={className}
+    >
+      {children}
+    </motion.button>
+  );
 };
 
 export default AnimatedButton;

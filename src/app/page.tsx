@@ -2,23 +2,23 @@ import Aboutme from '@/components/Aboutme';
 import Hero from '@/components/Hero';
 import ProjectCard from '@/components/ProjectCard';
 import Skills from '@/components/Skills';
+import AnimatedText from '@/components/ui/AnimatedText';
 import { projects } from '@/data/data';
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="overflow-x-hidden flex flex-col">
       <section>
+        {/* ADD overflow-x-hidden TO ALL WEBSITE */}
         <Hero />
       </section>
-      <h1 className="text-5xl text-white font-bold mb-4 text-center p-10 ">
-        About Me
-      </h1>
-      <section className="hero min-h-screen">
+
+      <section className="min-h-screen">
         <Aboutme />
       </section>
-      <h1 className="text-5xl text-white font-bold mb-4 text-center p-10 ">
+      <AnimatedText className="text-3xl md:text-4xl sm:text-4xl lg:text-5xl text-white font-bold mb-4 text-center p-10 ">
         Projects
-      </h1>
+      </AnimatedText>
       <section className="justify-center min-h-screen flex flex-col items-center  overflow-x-hidden">
         <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center gap-2 ">
           {projects.map((project, index) => (
@@ -26,10 +26,8 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <h1 className="text-5xl text-white font-bold mb-4 bg- text-center p-10 ">
-        Skills
-      </h1>
-      <section className="flex flex-row justify-center items-center pb-20 overflow-x-hidden">
+
+      <section className="">
         <Skills />
       </section>
     </main>

@@ -1,8 +1,6 @@
 import AnimatedText from '@/components/ui/AnimatedText';
 import { aboutMeData } from '@/data/data';
 
-interface HeroProps {}
-
 const Hero = () => {
   return (
     <div

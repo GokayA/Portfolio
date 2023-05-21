@@ -34,6 +34,9 @@ const Navbar: FC<NavbarProps> = ({}) => {
             <li>
               <a>Resume</a>
             </li>
+            <li>
+              <a>Skills</a>
+            </li>
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl">Home</a>
@@ -48,7 +51,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
             <a>Projects</a>
           </li>
           <li>
-            <a>Projects</a>
+            <a>Skills</a>
           </li>
         </ul>
       </div>

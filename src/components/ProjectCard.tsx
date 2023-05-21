@@ -18,7 +18,7 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const { title, body1, body2, image, links } = project;
+  const { title, body1, body2, links } = project;
 
   return (
     <div className="card w-full bg-base-100 shadow-2xl">
@@ -31,7 +31,9 @@ function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex flex-row flex-wrap gap-2 pt-4">
           {body2.map((body, index) => (
             <div key={index} className="card-actions ">
-              <div className="badge badge-warning p-3">{body.split(',')}</div>
+              <div className="badge text-slate-900 font-bold badge-warning p-3">
+                {body.split(',')}
+              </div>
             </div>
           ))}
         </div>

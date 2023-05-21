@@ -1,136 +1,72 @@
-import { FC } from 'react';
+'use client';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import AnimatedText from './ui/AnimatedText';
 
-interface SkillsProps {}
+const Skills = () => {
+  const skills = [
+    'HTML',
+    'TailwindCSS',
+    'CSS',
+    'JavaScript',
+    'React',
+    'PostgreSQL',
+    'Next.js',
+    'MongoDB',
+    'Prisma',
+    'TypeScript',
+  ];
+  const [radius, setRadius] = useState(0);
+  const angle = (2 * Math.PI) / skills.length;
 
-const Skills: FC<SkillsProps> = ({}) => {
+  useEffect(() => {
+    const calculateRadius = () => {
+      const minDimension = Math.min(window.innerWidth, window.innerHeight);
+      const radiusPercentage = 0.4;
+      const calculatedRadius = minDimension * radiusPercentage;
+      setRadius(calculatedRadius);
+    };
+
+    calculateRadius();
+
+    window.addEventListener('resize', calculateRadius);
+    return () => window.removeEventListener('resize', calculateRadius);
+  }, []);
+
   return (
-    <div className="flex flex-row ">
-      <div className="mr-20">
-        <h1 className="text-3xl font-bold mb-6">Frontend Skills</h1>
-        <div className="mb-4">
-          <p className="font-semibold">HTML</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-success w-64 bg-white h-4"
-              value="96"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">96%</span>
-          </div>
-        </div>
-        <div className="mb-4">
-          <p className="font-semibold">CSS</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-primary w-64 bg-white h-4"
-              value="90"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">90%</span>
-          </div>
-        </div>
-        <div className="mb-4">
-          <p className="font-semibold">JavaScript</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-secondary w-64 bg-white h-4"
-              value="85"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">85%</span>
-          </div>
-        </div>
-        <div className="mb-4">
-          <p className="font-semibold">React</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-warning w-64 bg-white h-4"
-              value="80"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">80%</span>
-          </div>
-        </div>
-        <div className="mb-4">
-          <p className="font-semibold">Next.js</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-error w-64 bg-white h-4"
-              value="75"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">75%</span>
-          </div>
-        </div>
-        <div className="mb-4">
-          <p className="font-semibold">Tailwind CSS</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-info w-64 bg-white h-4"
-              value="85"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">85%</span>
-          </div>
-        </div>
-        <div className="mb-4">
-          <p className="font-semibold">TypeScript</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-accent w-64 bg-white h-4"
-              value="70"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">70%</span>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h1 className="text-3xl font-bold mb-6">Backend Skills</h1>
-        <div className="mb-4">
-          <p className="font-semibold">Node.js</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-success w-64 bg-white h-4"
-              value="80"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">80%</span>
-          </div>
-        </div>
-        <div className="mb-4">
-          <p className="font-semibold">MongoDB</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-primary w-64 bg-white h-4"
-              value="75"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">75%</span>
-          </div>
-        </div>
-        <div className="mb-4">
-          <p className="font-semibold">PostgreSQL</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-secondary w-64 bg-white h-4"
-              value="80"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">80%</span>
-          </div>
-        </div>
-        <div className="mb-4">
-          <p className="font-semibold">Prisma</p>
-          <div className="flex items-center">
-            <progress
-              className="progress progress-warning w-64 bg-white h-4"
-              value="70"
-              max="100"
-            ></progress>
-            <span className="ml-4 text-gray-600">70%</span>
-          </div>
-        </div>
+    <div
+      className="overflow-x-hidden flex flex-col justify-center min-h-screen items-center"
+      style={{
+        background:
+          'radial-gradient(circle, rgba(3,39,74,1) 0%, rgba(7,8,22,1) 24%, rgba(0,43,61,1) 41%)',
+      }}
+    >
+      <div className="relative w-96 h-96 justify-center items-center flex">
+        <AnimatedText className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          Web Skills
+        </AnimatedText>
+        {skills.map((skill, index) => (
+          <motion.div
+            key={skill}
+            className="absolute  justify-center items-center gap-5 rounded-lg p-4"
+            initial={{ x: 0, y: 0 }}
+            whileInView={{
+              x: radius * Math.cos(index * angle),
+              y: radius * Math.sin(index * angle),
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+              ease: 'easeOut',
+              delay: index * 0.1,
+            }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <button className="btn btn-warning text-lg font-bold text-slate-900 mb-2">
+              {skill}
+            </button>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

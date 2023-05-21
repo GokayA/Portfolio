@@ -10,7 +10,7 @@ interface AnimatedTextProps {
   };
 }
 
-const quote = {
+const split = {
   initial: {
     opacity: 1,
   },
@@ -22,7 +22,7 @@ const quote = {
     },
   },
 };
-const singleWord = {
+const word = {
   initial: {
     opacity: 0,
     y: 50,

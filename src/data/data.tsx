@@ -33,69 +33,69 @@ export const contactMeText = {
 
 export const projects = [
   {
-    title: 'Personal Finance Tracker',
+    title: 'Recipe Share',
     body1:
-      'A web application that allows users to track their income and expenses, categorize transactions, and view reports and charts to gain insights into their spending habits.',
-    body2: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
-    image: 'luke-chesser-JKUTrJ4vK00-unsplash.jpg',
+      'This is a recipe food project where you can find and share your favorite recipes. The project is deployed on Vercel',
+    body2: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React',
+      'NextJS',
+      'TailwindCSS',
+      'TypeScript',
+      'Prisma',
+    ],
+    image: 'recipeproject.png',
     links: [
       {
         text: 'Source Code',
-        url: 'https://github.com/richardbrown/personal-finance-tracker',
+        url: 'https://github.com/GokayA/recipeProject',
       },
       {
         text: 'Live Site',
-        url: 'https://personal-finance-tracker.richardbrown.net',
+        url: 'https://recipe-project-omega.vercel.app/',
       },
     ],
   },
   {
-    title: 'Movie Recommendation System',
-    body1:
-      'A machine learning model that recommends movies to users based on their viewing history and preferences.',
-    body2: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
-    image: 'charlesdeluvio-jtmwD4i4v1U-unsplash.png',
+    title: 'Todo App',
+    body1: 'A todo app used Nextjs and Mongodb.',
+    body2: ['HTML', 'CSS', 'JavaScript', 'NextJS', 'Mongodb'],
+    image: 'todo.png',
     links: [
       {
         text: 'Source Code',
-        url: 'https://github.com/richardbrown/weather-app',
+        url: 'https://github.com/GokayA/todoNextjs',
       },
       {
         text: 'Live Site',
-        url: 'https://weather-app.richardbrown.net',
+        url: '#',
       },
     ],
   },
   {
-    title: 'Tic-Tac-Toe Game',
-    body1: 'A simple game of Tic-Tac-Toe built with Python and Pygame. ',
-    body2: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
-    image: 'tic_tac_toe.png',
-    links: [
-      {
-        text: 'Source Code',
-        url: 'https://github.com/richardbrown/tic-tac-toe-app',
-      },
-      {
-        text: 'Live Site',
-        url: 'https://todo-list-app.richardbrown.net',
-      },
+    title: 'Portfolio Page',
+    body1: 'My porfolio page project. ',
+    body2: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'React',
+      'NextJS',
+      'TailwindCSS',
+      'DaisUI',
+      'Frame Motion',
     ],
-  },
-  {
-    title: 'Weather App',
-    body1:
-      'A web application that allows users to search for the current weather conditions in any city in the world.',
-    body2: ['HTML', 'CSS', 'JavaScript', 'OpenWeather API'],
-    image: 'luke-chesser-JKUTrJ4vK00-unsplash.jpg',
+    image: 'portfolio2.png',
     links: [
       {
         text: 'Source Code',
-        url: 'https://github.com/richardbrown/weather-app',
+        url: 'https://github.com/GokayA/Portfolio',
       },
       {
         text: 'Live Site',
-        url: 'https://weather-app.richardbrown.net',
+        url: '#',
       },
     ],
   },

@@ -5,12 +5,13 @@ import { FC } from 'react';
 interface AnimatedTextProps {
   children: string;
   className: string;
+  id?: string;
   style?: {
     background: string;
   };
 }
 
-const quote = {
+const split = {
   initial: {
     opacity: 1,
   },
@@ -22,7 +23,7 @@ const quote = {
     },
   },
 };
-const singleWord = {
+const word = {
   initial: {
     opacity: 0,
     y: 50,
@@ -40,16 +41,12 @@ const AnimatedText: FC<AnimatedTextProps> = ({ children, className = '' }) => {
   return (
     <motion.h1
       className={className}
-      variants={quote}
+      variants={split}
       initial="initial"
       whileInView="whileInView"
     >
       {children.split(' ').map((child, index) => (
-        <motion.span
-          key={child + '-' + index}
-          className=""
-          variants={singleWord}
-        >
+        <motion.span key={child + '-' + index} className="" variants={word}>
           {child}&nbsp;
         </motion.span>
       ))}

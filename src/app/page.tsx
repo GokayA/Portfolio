@@ -8,26 +8,30 @@ import { projects } from '@/data/data';
 export default function Home() {
   return (
     <main className="overflow-x-hidden flex flex-col">
-      <section>
+      <section id="home">
         {/* ADD overflow-x-hidden TO ALL WEBSITE */}
         <Hero />
       </section>
 
-      <section className="min-h-screen">
+      <section id="aboutme" className="min-h-screen">
         <Aboutme />
       </section>
-      <AnimatedText className="text-3xl md:text-4xl sm:text-4xl lg:text-5xl text-white font-bold mb-4 text-center p-10 ">
-        Projects
-      </AnimatedText>
-      <section className="justify-center min-h-screen flex flex-col items-center  overflow-x-hidden">
-        <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center gap-2 ">
+
+      <section
+        id="projects"
+        className="justify-center min-h-screen flex flex-col items-center  overflow-x-hidden "
+      >
+        <AnimatedText className="text-2xl md:text-3xl sm:text-3xl lg:text-4xl text-white font-bold mb-4 text-center p-10 ">
+          Projects
+        </AnimatedText>
+        <div className="container grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 justify-center gap-2 ">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
         </div>
       </section>
 
-      <section className="">
+      <section id="skills" className="">
         <Skills />
       </section>
     </main>

@@ -5,16 +5,16 @@ import AnimatedText from './ui/AnimatedText';
 
 const Skills = () => {
   const skills = [
-    'HTML',
     'TailwindCSS',
+    'TypeScript',
+    'Prisma',
+    'PostgreSQL',
+    'MongoDB',
+    'Next.js',
+    'React',
+    'HTML',
     'CSS',
     'JavaScript',
-    'React',
-    'PostgreSQL',
-    'Next.js',
-    'MongoDB',
-    'Prisma',
-    'TypeScript',
   ];
   const [radius, setRadius] = useState(0);
   const angle = (2 * Math.PI) / skills.length;
@@ -54,7 +54,6 @@ const Skills = () => {
               x: radius * Math.cos(index * angle),
               y: radius * Math.sin(index * angle),
             }}
-            viewport={{ once: true }}
             transition={{
               duration: 0.5,
               ease: 'easeOut',

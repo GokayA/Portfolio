@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import AnimatedText from './ui/AnimatedText';
 
 interface Link {
   text: string;
@@ -38,22 +39,22 @@ const ProjectCardVariant = {
 };
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const { title, body1, body2, links } = project;
+  const { title, body1, body2, links, image } = project;
 
   return (
     <motion.div
-      className="card w-full bg-base-100 shadow-2xl"
+      className="card w-full  bg-info-content shadow-2xl  "
       variants={ProjectCardVariant}
       initial="initial"
       whileInView="whileInView"
     >
-      <figure>
-        <Image width={300} height={300} src="/avatar.png" alt="Shoes" />
+      <figure className="h-96">
+        <Image width={400} height={400} src={`/${image}`} alt={title} />
       </figure>
       <div className="card-body">
         <h2 className="card-title justify-center ">{title}</h2>
         <p className="mt-2 ">{body1}</p>
-        <div className="flex flex-row flex-wrap gap-2 pt-4">
+        <div className="flex flex-row flex-wrap gap-2 pt-4 ">
           {body2.map((body, index) => (
             <div key={index} className="card-actions ">
               <div className="badge text-slate-900 font-bold badge-warning p-3">
@@ -65,7 +66,12 @@ function ProjectCard({ project }: ProjectCardProps) {
       </div>
       <div className="card-actions justify-center my-4 ">
         {links.map((link, index) => (
-          <a key={index} href={link.url} className=" btn btn-primary ">
+          <a
+            key={index}
+            href={link.url}
+            target="_blank"
+            className=" btn btn-primary "
+          >
             {link.text}
           </a>
         ))}

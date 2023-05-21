@@ -1,9 +1,9 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Porfolio Project',
@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="dark" className={inter.className}>
+    <html lang="en" data-theme="dark" className={montserrat.className}>
       <body className="">
         <Navbar />
         {children}

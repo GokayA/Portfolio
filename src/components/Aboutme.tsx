@@ -10,7 +10,7 @@ const Aboutme = () => {
       </AnimatedText>
       <div className="hero-content flex-col lg:flex-row-reverse">
         <Image
-          src="/avatar.png"
+          src="/dev.png"
           className="max-w-sm rounded-lg shadow-2xl"
           alt="profile-image"
           width={700}

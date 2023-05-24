@@ -52,7 +52,9 @@ function ProjectCard({ project }: ProjectCardProps) {
         <Image width={400} height={400} src={`/${image}`} alt={title} />
       </figure>
       <div className="card-body">
-        <h2 className="card-title justify-center ">{title}</h2>
+        <h2 className="card-title justify-center font-bold text-2xl ">
+          {title}
+        </h2>
         <p className="mt-2 ">{body1}</p>
         <div className="flex flex-row flex-wrap gap-2 pt-4 ">
           {body2.map((body, index) => (

@@ -37,22 +37,6 @@ export const projects = [
     ],
   },
   {
-    title: 'Todo App',
-    body1: 'A todo app used Nextjs and Mongodb.',
-    body2: ['HTML', 'CSS', 'JavaScript', 'NextJS', 'Mongodb'],
-    image: 'todo.png',
-    links: [
-      {
-        text: 'Source Code',
-        url: 'https://github.com/GokayA/todoNextjs',
-      },
-      {
-        text: 'Live Site',
-        url: '#',
-      },
-    ],
-  },
-  {
     title: 'Portfolio Page',
     body1: 'My porfolio page project. ',
     body2: [
@@ -70,6 +54,22 @@ export const projects = [
       {
         text: 'Source Code',
         url: 'https://github.com/GokayA/Portfolio',
+      },
+      {
+        text: 'Live Site',
+        url: '#',
+      },
+    ],
+  },
+  {
+    title: 'Todo App',
+    body1: 'A todo app used Nextjs and Mongodb.',
+    body2: ['HTML', 'CSS', 'JavaScript', 'NextJS', 'Mongodb'],
+    image: 'todo.png',
+    links: [
+      {
+        text: 'Source Code',
+        url: 'https://github.com/GokayA/todoNextjs',
       },
       {
         text: 'Live Site',

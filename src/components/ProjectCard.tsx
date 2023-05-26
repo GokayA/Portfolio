@@ -1,11 +1,13 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import AnimatedText from './ui/AnimatedText';
+import { BiLinkExternal } from 'react-icons/bi';
+import { BsCodeSlash } from 'react-icons/bs';
 
 interface Link {
   text: string;
   url: string;
+  Icon: React.ReactNode;
 }
 interface Project {
   title: string;
@@ -74,7 +76,14 @@ function ProjectCard({ project }: ProjectCardProps) {
             target="_blank"
             className=" btn btn-primary "
           >
-            {link.text}
+            {link.Icon === 'BsCodeSlash' ? (
+              <BsCodeSlash className="mr-2" />
+            ) : link.Icon === 'BiLinkExternal' ? (
+              <BiLinkExternal className="mr-2" />
+            ) : (
+              <span>{link.Icon}</span>
+            )}
+            <span>{link.text}</span>
           </a>
         ))}
       </div>

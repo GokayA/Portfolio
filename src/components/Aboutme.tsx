@@ -27,7 +27,18 @@ const Aboutme = () => {
           <AnimatedText className="flex flex-row text-2xl md:text-3xl sm:text-3xl lg:text-4xl  font-bold">
             {aboutMeData.title}
           </AnimatedText>
-          <p className="py-6">{aboutMeData.body}</p>
+          <p className="py-6">
+            I{`'`}m self taught front end developer with a strong understanding
+            of design principles and user experience. Seeking an entry level{' '}
+            <span className="text-xl text-slate-200 italic font-semibold">
+              Front End Developer role to take my skills to the next level and
+              gain professional experience.
+            </span>{' '}
+            I enjoy problem solving and creating new things. I have proficient
+            in HTML, CSS, JavaScript, and React, with a passion for writing
+            clean and maintainable code. I like to following the latest industry
+            trends and technologies and staying up-to-date with.
+          </p>
         </div>
       </div>
     </div>

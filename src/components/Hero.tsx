@@ -21,7 +21,7 @@ const Hero = () => {
             {aboutMeData.title}
           </AnimatedText>
           <div className="flex justify-center gap-5 pt-10">
-            <Link href="/dummy.pdf" target="_blank" download="true">
+            <Link href="/resume.pdf" target="_blank" download="resume.pdf">
               <AnimatedButton className="btn hover:bg-slate-500 text-white">
                 Resume
               </AnimatedButton>

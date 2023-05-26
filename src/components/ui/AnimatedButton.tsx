@@ -9,7 +9,7 @@ interface AnimatedButtonProps {
 
 const buttonVariants = {
   initial: {
-    x: '-90vw',
+    x: '-180vw',
   },
   animate: {
     x: 0,

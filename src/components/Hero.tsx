@@ -8,7 +8,7 @@ const Hero = () => {
     <div
       className="hero min-h-screen"
       style={{
-        backgroundImage: `url("/background2.jpg")`,
+        backgroundImage: `url("/background.png")`,
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
@@ -17,7 +17,7 @@ const Hero = () => {
           <AnimatedText className="mb-5 text-2xl md:text-3xl sm:text-3xl lg:text-6xl text-white font-bold">
             {aboutMeData.name}
           </AnimatedText>
-          <AnimatedText className="mb-5 text-2xl">
+          <AnimatedText className="mb-5 primary-content font-semibold text-2xl">
             {aboutMeData.title}
           </AnimatedText>
           <div className="flex justify-center gap-5 pt-10">

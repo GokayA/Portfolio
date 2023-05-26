@@ -68,10 +68,10 @@ const Footer: FC<FooterProps> = ({}) => {
             </svg>
           </Link>
           <Link
-            target="_blank"
-            rel="noopener"
             className="btn btn-outline btn-sm hover:bg-slate-500 "
-            href="https://resume.io/r/eaPOk5zcQ"
+            href="/resume.pdf"
+            target="_blank"
+            download="resume.pdf"
           >
             <svg
               width="24"

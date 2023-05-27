@@ -6,7 +6,7 @@ export const aboutMeData = {
 
 export const projects = [
   {
-    title: 'Recipe Share',
+    title: 'Recipe Food Share Project',
     body1:
       'This is a recipe food project where you can find and share your favorite recipes. The project is deployed on Vercel',
     body2: [
@@ -34,8 +34,8 @@ export const projects = [
     ],
   },
   {
-    title: 'Portfolio Page',
-    body1: 'My porfolio page project. ',
+    title: 'Portfolio Website',
+    body1: 'My porfolio Website project. ',
     body2: [
       'HTML',
       'CSS',

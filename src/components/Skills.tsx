@@ -42,7 +42,7 @@ const Skills = () => {
       }}
     >
       <div className="relative w-96 h-96 justify-center items-center flex">
-        <AnimatedText className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+        <AnimatedText className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold primary-content ">
           Web Skills
         </AnimatedText>
         {skills.map((skill, index) => (

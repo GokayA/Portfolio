@@ -45,19 +45,26 @@ function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <motion.div
-      className="card w-full  bg-info-content shadow-2xl  "
+      className="card w-full  bg-primary shadow-2xl  "
       variants={ProjectCardVariant}
       initial="initial"
       whileInView="whileInView"
     >
-      <figure className="h-96">
-        <Image width={400} height={400} src={`/${image}`} alt={title} />
+      <figure className="h-96 ">
+        <Image
+          width={400}
+          height={400}
+          src={`/${image}`}
+          alt={title}
+          className={'h-auto w-auto '}
+          priority={image === 'portfolio2.png'}
+        />
       </figure>
       <div className="card-body">
-        <h2 className="card-title justify-center font-bold text-2xl ">
+        <h2 className="card-title justify-center font-bold text-2xl primary-content ">
           {title}
         </h2>
-        <p className="mt-2 ">{body1}</p>
+        <p className="mt-2 primary-content">{body1}</p>
         <div className="flex flex-row flex-wrap gap-2 pt-4 ">
           {body2.map((body, index) => (
             <div key={index} className="card-actions ">
@@ -74,7 +81,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             key={index}
             href={link.url}
             target="_blank"
-            className=" btn btn-primary "
+            className="btn btn-primary "
           >
             {link.Icon === 'BsCodeSlash' ? (
               <BsCodeSlash className="mr-2" />

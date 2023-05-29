@@ -12,16 +12,16 @@ export default function Home() {
         <Hero />
       </section>
       <div className="divider "></div>
-
       <section id="aboutme" className="min-h-screen">
         <Aboutme />
       </section>
+
       <div className="divider "></div>
       <section
         id="projects"
         className="pb-10 justify-center min-h-screen flex flex-col items-center  overflow-x-hidden "
       >
-        <AnimatedText className="text-2xl md:text-3xl sm:text-3xl lg:text-4xl text-white font-bold mb-4 text-center p-10 ">
+        <AnimatedText className="text-2xl md:text-3xl sm:text-3xl lg:text-4xl primary-content  font-bold mb-4 text-center p-10 ">
           Projects
         </AnimatedText>
         <div className="container grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 justify-center gap-2 ">

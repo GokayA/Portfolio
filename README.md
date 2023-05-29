@@ -19,4 +19,4 @@ My portfolio website shows my skills and projects.
 - React
 - Next.js
 - TailwindCSS
-- DaisUI
+- DaisyUI

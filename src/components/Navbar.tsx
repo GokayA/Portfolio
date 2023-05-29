@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import { FC } from 'react';
+import ThemeSwitcher from './Themeswitch';
 
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
   return (
-    <div className="navbar bg-info-content fixed z-30">
-      <div className="navbar-start">
+    <div className="navbar bg-primary fixed z-30">
+      <div className="navbar-start  ">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn btn-primary-content lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -26,7 +27,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-52"
           >
             <li>
               <Link href="#aboutme">About</Link>
@@ -45,12 +46,15 @@ const Navbar: FC<NavbarProps> = ({}) => {
             </li>
           </ul>
         </div>
-        <Link href="#home" className="btn btn-ghost normal-case text-xl">
+        <Link
+          href="#home"
+          className="btn btn-ghost-content normal-case text-xl"
+        >
           Home
         </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-center hidden lg:flex primary-content">
+        <ul className="menu menu-horizontal px-1 ">
           <li>
             <Link href="#aboutme">About</Link>
           </li>
@@ -64,7 +68,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         </ul>
       </div>
       <div className="navbar-end sm:pr-20 md:pr-20 lg:pr-16">
-        <div className="grid grid-flow-col  gap-6">
+        <div className="grid grid-flow-col gap-1 sm:gap-3 md:gap-4 lg:gap-4 ">
           <Link
             target="_blank"
             rel="noopener"
@@ -112,8 +116,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
               width="24"
               height="24"
               xmlns="http://www.w3.org/2000/svg"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
             >
               <path
                 fill="#FFFFFF"
@@ -122,6 +126,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
             </svg>
           </Link>
         </div>
+
+        <ThemeSwitcher />
       </div>
       <hr />
     </div>

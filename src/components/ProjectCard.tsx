@@ -68,7 +68,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex flex-row flex-wrap gap-2 pt-4 ">
           {body2.map((body, index) => (
             <div key={index} className="card-actions ">
-              <div className="badge text-slate-900 font-bold badge-warning p-3">
+              <div className="badge primary-content font-bold badge-warning p-3">
                 {body.split(',')}
               </div>
             </div>
@@ -77,12 +77,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       </div>
       <div className="card-actions justify-center my-4 ">
         {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.url}
-            target="_blank"
-            className="btn btn-primary "
-          >
+          <a key={index} href={link.url} target="_blank" className="btn btn-">
             {link.Icon === 'BsCodeSlash' ? (
               <BsCodeSlash className="mr-2" />
             ) : link.Icon === 'BiLinkExternal' ? (

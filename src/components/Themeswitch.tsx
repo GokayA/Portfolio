@@ -63,7 +63,11 @@ const ThemeSwitcher = () => {
         className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
       >
         {themes.map((theme) => (
-          <button key={theme} onClick={() => changeTheme(theme)}>
+          <button
+            key={theme}
+            onClick={() => changeTheme(theme)}
+            className="capitalize"
+          >
             {theme}
           </button>
         ))}

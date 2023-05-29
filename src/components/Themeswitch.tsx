@@ -3,11 +3,17 @@ import { themes } from '@/data/data';
 import React, { useEffect, useState } from 'react';
 
 const ThemeSwitcher = () => {
-  const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
+  let savedTheme = 'dark';
 
-  const [selectedTheme, setSelectedTheme] = useState<string>(savedTheme);
+  if (typeof window !== 'undefined' && window.localStorage) {
+    savedTheme = localStorage.getItem('selectedTheme') as string;
+  }
 
-  const changeTheme = ({ theme }: any) => {
+  const [selectedTheme, setSelectedTheme] = useState<string>(
+    savedTheme && themes.includes(savedTheme) ? savedTheme : 'dark'
+  );
+
+  const changeTheme = (theme: string) => {
     setSelectedTheme(theme);
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('selectedTheme', theme);
@@ -57,7 +63,7 @@ const ThemeSwitcher = () => {
         className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
       >
         {themes.map((theme) => (
-          <button key={theme} onClick={() => changeTheme({ theme })}>
+          <button key={theme} onClick={() => changeTheme(theme)}>
             {theme}
           </button>
         ))}

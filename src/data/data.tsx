@@ -46,7 +46,7 @@ export const projects = [
       'DaisUI',
       'Frame Motion',
     ],
-    image: 'portfolio2.png',
+    image: 'portfolio.png',
     links: [
       {
         text: 'Source Code',

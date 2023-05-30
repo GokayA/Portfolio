@@ -50,7 +50,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       initial="initial"
       whileInView="whileInView"
     >
-      <figure className="">
+      <figure className="h-96">
         <Image
           width={500}
           height={500}

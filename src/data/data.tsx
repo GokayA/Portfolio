@@ -94,7 +94,6 @@ export const themes = [
   'garden',
   'forest',
   'aqua',
-  'lofi',
   'pastel',
   'fantasy',
   'wireframe',

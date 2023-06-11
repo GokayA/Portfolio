@@ -12,7 +12,7 @@ const Aboutme = () => {
         <Image
           src="/dev.png"
           className="max-w-sm rounded-lg shadow-2xl"
-          alt="profile-image"
+          alt="profile image"
           width={700}
           height={475}
           sizes="100vw"
@@ -28,16 +28,12 @@ const Aboutme = () => {
             {aboutMeData.title}
           </AnimatedText>
           <p className="py-6">
-            I{`'`}m self taught front end developer with a strong understanding
-            of design principles and user experience. Seeking an entry level{' '}
+            {aboutMeData.body}
             <span className="text-xl primary-content italic font-semibold">
-              Front End Developer role to take my skills to the next level and
-              gain professional experience.
+              {' '}
+              {aboutMeData.boldBody}
             </span>{' '}
-            I enjoy problem solving and creating new things. I have proficient
-            in HTML, CSS, JavaScript, and React, with a passion for writing
-            clean and maintainable code. I like to following the latest industry
-            trends and technologies and staying up-to-date with.
+            {aboutMeData.endBody}
           </p>
         </div>
       </div>

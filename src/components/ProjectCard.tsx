@@ -45,18 +45,17 @@ function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <motion.div
-      className="card w-full  bg-primary shadow-2xl"
+      className="card w-full h-full bg-primary shadow-2xl"
       variants={ProjectCardVariant}
       initial="initial"
       whileInView="whileInView"
     >
-      <figure className="h-96">
+      <figure className="relative w-full h-56 rounded-sm- overflow-hidden">
         <Image
-          width={500}
-          height={500}
+          fill
           src={`/${image}`}
-          alt={title}
-          className="h-auto w-auto"
+          alt={`${title} image`}
+          className="object-cover"
           priority={image === 'portfolio2.png'}
         />
       </figure>

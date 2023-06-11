@@ -48,7 +48,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         </div>
         <Link
           href="#home"
-          className="btn btn-primary-content normal-case text-xl"
+          className="btn btn-primary-content normal-case text-sm sm:text-xl md:text-xl"
         >
           Home
         </Link>

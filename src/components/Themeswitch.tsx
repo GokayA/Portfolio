@@ -3,14 +3,14 @@ import { themes } from '@/data/data';
 import React, { useEffect, useState } from 'react';
 
 const ThemeSwitcher = () => {
-  let savedTheme = 'luxury';
+  let savedTheme = 'dark';
 
   if (typeof window !== 'undefined' && window.localStorage) {
     savedTheme = localStorage.getItem('selectedTheme') as string;
   }
 
   const [selectedTheme, setSelectedTheme] = useState<string>(
-    savedTheme && themes.includes(savedTheme) ? savedTheme : 'luxury'
+    savedTheme && themes.includes(savedTheme) ? savedTheme : 'dark'
   );
 
   const changeTheme = (theme: string) => {

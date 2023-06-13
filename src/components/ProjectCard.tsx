@@ -14,6 +14,7 @@ interface Project {
   body1: string;
   body2: string[];
   image: string;
+  WIP: boolean;
   links: Link[];
 }
 
@@ -41,7 +42,7 @@ const ProjectCardVariant = {
 };
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const { title, body1, body2, links, image } = project;
+  const { title, body1, body2, links, image, WIP } = project;
 
   return (
     <motion.div
@@ -62,6 +63,11 @@ function ProjectCard({ project }: ProjectCardProps) {
       <div className="card-body">
         <h2 className="card-title justify-center font-bold text-2xl primary-content ">
           {title}
+          {WIP ? (
+            <div className="badge badge-secondary">WorkInProgress</div>
+          ) : (
+            ''
+          )}
         </h2>
         <p className="mt-2 primary-content">{body1}</p>
         <div className="flex flex-row flex-wrap gap-2 pt-4 ">

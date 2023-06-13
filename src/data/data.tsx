@@ -10,6 +10,7 @@ export const aboutMeData = {
 
 export const projects = [
   {
+    WIP: false,
     title: 'Recipe Food Share Project',
     body1:
       'This is a recipe food project where you can find and share your favorite recipes. The project is deployed on Vercel',
@@ -38,6 +39,7 @@ export const projects = [
     ],
   },
   {
+    WIP: false,
     title: 'Portfolio Website',
     body1: 'My porfolio Website project to show my skills and projects. ',
     body2: [
@@ -65,6 +67,33 @@ export const projects = [
     ],
   },
   {
+    WIP: true,
+    title: 'Spotify Clone',
+    body1: 'A Spotify Clone app used Nextjs and SpotifyAPI.',
+    body2: [
+      'HTML',
+      'TailwindCSS',
+      'JavaScript',
+      'NextJS',
+      'TypeScript',
+      'SpotifyAPI',
+    ],
+    image: 'Spotify.png',
+    links: [
+      {
+        text: 'Source Code',
+        Icon: 'BsCodeSlash',
+        url: 'https://github.com/GokayA/spotifyClone',
+      },
+      {
+        text: 'Live Site',
+        Icon: 'BiLinkExternal',
+        url: 'https://spotify-clone-xi-blush.vercel.app/',
+      },
+    ],
+  },
+  {
+    WIP: false,
     title: 'Todo App',
     body1: 'A todo app used Nextjs and Mongodb.',
     body2: ['HTML', 'CSS', 'JavaScript', 'NextJS', 'Mongodb'],

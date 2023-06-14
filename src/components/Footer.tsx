@@ -25,7 +25,7 @@ const Footer: FC<FooterProps> = ({}) => {
           download="resume.pdf"
           className="link link-hover"
         >
-          Resume
+          Rèsumè
         </Link>
       </div>
       <div>

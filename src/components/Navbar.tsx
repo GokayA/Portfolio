@@ -41,7 +41,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
             </li>
             <li>
               <Link href="/resume.pdf" target="_blank" download="resume.pdf">
-                Resume
+                Rèsumè
               </Link>
             </li>
           </ul>

@@ -23,7 +23,7 @@ const Hero = () => {
           <div className="flex justify-center gap-5 pt-10">
             <Link href="/resume.pdf" target="_blank" download="resume.pdf">
               <AnimatedButton className="btn hover:bg-slate-500 primary-content ">
-                Resume
+                Rèsumè
               </AnimatedButton>
             </Link>
             <div className="divider divider-horizontal"></div>

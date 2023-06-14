@@ -3,7 +3,7 @@ export const aboutMeData = {
   title: `I'm a Front-end Developer`,
   body: "I'm self-taught front-end developer with a strong understanding of design principles and user experience. Seeking a",
   boldBody:
-    'Front End Developer role to take my skills to the next level and gain professional experience.',
+    'Front-End Developer role to take my skills to the next level and gain professional experience.',
   endBody:
     'I enjoy problem solving and creating new websites. I have proficient in HTML, CSS, JavaScript, and React, with a passion for writing clean and maintainable code. I like to following the latest industry trends and technologies and staying up-to-date with.',
 };

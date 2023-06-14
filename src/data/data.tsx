@@ -10,31 +10,28 @@ export const aboutMeData = {
 
 export const projects = [
   {
-    WIP: false,
-    title: 'Recipe Food Share Project',
-    body1:
-      'This is a recipe food project where you can find and share your favorite recipes. The project is deployed on Vercel',
+    WIP: true,
+    title: 'Spotify Clone',
+    body1: 'A Spotify Clone app used Nextjs and SpotifyAPI.',
     body2: [
       'HTML',
-      'CSS',
-      'JavaScript',
-      'React',
-      'NextJS',
       'TailwindCSS',
+      'JavaScript',
+      'NextJS',
       'TypeScript',
-      'Prisma',
+      'SpotifyAPI',
     ],
-    image: 'recipeproject.png',
+    image: 'Spotify.png',
     links: [
       {
         text: 'Source Code',
         Icon: 'BsCodeSlash',
-        url: 'https://github.com/GokayA/recipeProject',
+        url: 'https://github.com/GokayA/spotifyClone',
       },
       {
         text: 'Live Site',
         Icon: 'BiLinkExternal',
-        url: 'https://recipe-project-omega.vercel.app/',
+        url: 'https://spotify-clone-xi-blush.vercel.app/',
       },
     ],
   },
@@ -66,29 +63,33 @@ export const projects = [
       },
     ],
   },
+
   {
-    WIP: true,
-    title: 'Spotify Clone',
-    body1: 'A Spotify Clone app used Nextjs and SpotifyAPI.',
+    WIP: false,
+    title: 'Recipe Food Share Project',
+    body1:
+      'This is a recipe food project where you can find and share your favorite recipes. The project is deployed on Vercel',
     body2: [
       'HTML',
-      'TailwindCSS',
+      'CSS',
       'JavaScript',
+      'React',
       'NextJS',
+      'TailwindCSS',
       'TypeScript',
-      'SpotifyAPI',
+      'Prisma',
     ],
-    image: 'Spotify.png',
+    image: 'recipeproject.png',
     links: [
       {
         text: 'Source Code',
         Icon: 'BsCodeSlash',
-        url: 'https://github.com/GokayA/spotifyClone',
+        url: 'https://github.com/GokayA/recipeProject',
       },
       {
         text: 'Live Site',
         Icon: 'BiLinkExternal',
-        url: 'https://spotify-clone-xi-blush.vercel.app/',
+        url: 'https://recipe-project-omega.vercel.app/',
       },
     ],
   },

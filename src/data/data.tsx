@@ -36,7 +36,7 @@ export const projects = [
     ],
   },
   {
-    WIP: false,
+    WIP: true,
     title: 'Portfolio Website',
     body1: 'My porfolio Website project to show my skills and projects. ',
     body2: [

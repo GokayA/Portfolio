@@ -1,10 +1,7 @@
 import Link from 'next/link';
-import { FC } from 'react';
 import ThemeSwitcher from './Themeswitch';
 
-interface NavbarProps {}
-
-const Navbar: FC<NavbarProps> = ({}) => {
+const Navbar = () => {
   return (
     <nav className="navbar bg-primary fixed z-30">
       <div className="navbar-start">

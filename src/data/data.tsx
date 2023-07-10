@@ -25,7 +25,7 @@ export const projects = [
       'Tanstack',
       'Redis',
     ],
-    image: 'review.png',
+    image: 'review2.png',
     links: [
       {
         text: 'Source Code',

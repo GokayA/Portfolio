@@ -11,6 +11,37 @@ export const aboutMeData = {
 export const projects = [
   {
     WIP: true,
+    title: 'Pro Product Review',
+    body1: 'Product website to share reviews about Amazon products. ',
+    body2: [
+      'HTML',
+      'CSS',
+      'React',
+      'NextJS',
+      'TailwindCSS',
+      'Shadcn-ui',
+      'Prisma',
+      'Zod',
+      'Tanstack',
+      'Redis',
+    ],
+    image: 'review.png',
+    links: [
+      {
+        text: 'Source Code',
+        Icon: 'BsCodeSlash',
+        url: 'https://github.com/GokayA/proreviewproduct',
+      },
+      {
+        text: 'Live Site',
+        Icon: 'BiLinkExternal',
+        url: 'https://proreviewproduct.vercel.app/',
+      },
+    ],
+  },
+
+  {
+    WIP: false,
     title: 'Spotify Clone',
     body1: 'A Spotify Clone app used Nextjs and SpotifyAPI.',
     body2: [

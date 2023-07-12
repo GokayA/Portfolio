@@ -1,7 +1,7 @@
 export const aboutMeData = {
   name: 'Gokay Akkus',
   title: `I'm a Web Developer`,
-  body: "I'm self-taught web developer with a strong understanding of design principles and user experience. Seeking a",
+  body: "I'm a web developer with a strong understanding of design principles and user experience. Seeking a",
   boldBody:
     'Web Developer role to take my skills to the next level and gain professional experience.',
   endBody:
